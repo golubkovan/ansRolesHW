@@ -2,24 +2,20 @@
 # tasks file for bildContainer
 - name: create build directory
   file:
-    path: /tmp/buildDoker
+    path: {{dest_folder}}
     state: directory
     owner: root
     group: root
     mode: '0755'
 
 - name: copy Dockerfile
-  copy:
-    src: ./Dockerfile
-    dest: /tmp/buildDoker/Dockerfile
-    owner: root
-    group: root
-    mode: '0644'
+  copy: src=Dockerfile dest={{ dest_folder }}/Dockerfile mode=0555
+
 
 - name: build container image
   docker_image:
     name: tomcat1:v1
     source: build
     build:
-    path: /tmp/buildDoker
+    path: {{dest_folder}}
     state: present

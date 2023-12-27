@@ -1,0 +1,16 @@
+---
+- name: Buld and upload image
+  hosts: build
+
+  roles:
+    - common
+    - bildContainer
+    - DockerImageUpload
+
+- name: Download and run image
+  hosts: dep
+  
+  roles:
+    - common
+    - DockerImageDownload
+    - deploidContainer
