@@ -1,2 +1,6 @@
 ---
 # tasks file for common
+- name: Ensure docker.io package present
+  apt:
+    name: docker.io
+    state: present
