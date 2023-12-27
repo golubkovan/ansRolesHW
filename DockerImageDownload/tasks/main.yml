@@ -1,2 +1,6 @@
 ---
 # tasks file for DockerImageDownload
+- name: Pull Docker image
+  docker_image:
+    name: agolubkov/tomcat1:v1
+    source: pull

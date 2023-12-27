@@ -1,2 +1,11 @@
 ---
 # tasks file for deploidContainer
+- name: RunDockerContainer
+  docker_container:
+    name: tomcat1
+    image: agolubkov/tomcat1:v1
+    exposed_ports:
+      - 8080
+    ports:
+      - "8080:8080"
+    state: started

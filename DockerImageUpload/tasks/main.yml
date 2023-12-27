@@ -1,2 +1,13 @@
 ---
 # tasks file for DockerImageUpload
+- name: Login DockerHub
+  docker_login:
+    username: agolubkov
+    password: dckr_pat_l9y81ahvdQ90YWqYCj4LZv-zLkA
+
+- name: Tag and push to docker hub
+  docker_image:
+    name: tomcat1:v1
+    repository: agolubkov/tomcat1:v1
+    push: yes
+    source: local
