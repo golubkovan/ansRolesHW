@@ -1,12 +1,7 @@
 ---
 # tasks file for bildContainer
 - name: create build directory
-  file:
-    path: {{dest_folder}}
-    state: directory
-    owner: root
-    group: root
-    mode: '0755'
+  file: path={{dest_folder}} state=directory mode=0755
 
 - name: copy Dockerfile
   copy: src=Dockerfile dest={{ dest_folder }}/Dockerfile mode=0555
