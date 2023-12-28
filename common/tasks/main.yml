@@ -9,5 +9,5 @@
 - name: Ensure pip package docker present
   pip3: name=docker state=present
   
-- name: Ensure pip package docker-py present
-  pip3: name=docker-py state=present
+#- name: Ensure pip package docker-py present
+#  pip3: name=docker-py state=present
