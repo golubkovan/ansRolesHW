@@ -5,3 +5,6 @@
 
 - name: Ensure python package present
   apt: name=python state=present update_cache=yes
+
+- name: Ensure python-pip package present
+  apt: name=python-pip state=present update_cache=yes
