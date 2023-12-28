@@ -7,4 +7,4 @@
   apt: name=python state=present update_cache=yes
 
 - name: Ensure ppython-docker package present
-  apt: name=python-docker state=present update_cache=yes
+  apt: name=python3-docker state=present update_cache=yes
