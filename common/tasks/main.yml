@@ -3,8 +3,5 @@
 - name: Ensure docker.io package present
   apt: name=docker.io state=present update_cache=yes
 
-- name: Install pip docker
-  pip3: name=docker state=present
-
-- name: install pip docker-py
-  pip3: name=docker-py state=present
+- name: Ensure python package present
+  apt: name=python state=present update_cache=yes
