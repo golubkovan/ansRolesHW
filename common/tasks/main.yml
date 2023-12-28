@@ -2,3 +2,9 @@
 # tasks file for common
 - name: Ensure docker.io package present
   apt: name=docker.io state=present update_cache=yes
+
+- name: Install pip docker
+  pip: name=docker state=present
+
+- name: install pip docker-py
+  pip: name=docker-py state=present
