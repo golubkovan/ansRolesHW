@@ -12,5 +12,5 @@
     name: tomcat1:v1
     source: build
     build:
-      path: {{dest_folder}}
+        path: {{dest_folder}}
     state: present
