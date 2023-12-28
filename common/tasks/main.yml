@@ -2,9 +2,3 @@
 # tasks file for common
 - name: Ensure docker.io package present
   apt: name=docker.io state=present update_cache=yes
-
-- name: Ensure python package present
-  apt: name=python state=present update_cache=yes
-
-- name: Ensure ppython-docker package present
-  apt: name=python3-docker state=present update_cache=yes
